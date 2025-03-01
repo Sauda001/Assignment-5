@@ -38,19 +38,19 @@
     <!-- Main body section -->
     <section class="flex gap-3 mt-6">
         <!-- Grid section -->
-        <section class=" bg-white p-6 rounded-xl">
+        <section class=" bg-white py-6 px-4 rounded-xl">
             <!-- grid header -->
-            <div class="pb-6 mb-6 border-b-2 border-dashed border-gray-300 grid grid-cols-3 gap-3">
-                <div class="bg flex justify-center items-center gap-3 rounded-xl pl-8 pt-8 pr-5 pb-6">
+            <div class="pb-6 mb-6 border-b-2 border-dashed border-gray-300 grid grid-cols-4 gap-3">
+                <div class="bg flex justify-center items-center p-3 gap-2 rounded-xl col-span-1">
                     <div class="rounded-full bg-white p-3">
                         <img class="" src="./assets/checkbox.png" alt="">
                     </div>
                     <div>
-                        <p class="text-slate-600 font-semibold">Task Assigned</p>
+                        <p class="text-slate-600 font-semibold text-sm">Task Assigned</p>
                         <h1 class="text-slate-800 text-2xl font-bold">05</h1>
                     </div>
                 </div>
-                <div class="flex justify-center items-center gap-4 pl-10 pt-5 pb-6 pr-20 rounded-xl bg-blue-600">
+                <div class="flex justify-center items-center gap-4 p-3 rounded-xl bg-blue-600 col-span-2  ">
                     <div>
                         <img src="./assets/board.png" alt="">
                     </div>
@@ -58,7 +58,7 @@
                         <p class="text-white">Discover Something New Today!</p>
                     </div>
                 </div>
-                <div class="flex justify-center items-center px-5 py-8 bg rounded-xl gap-4">
+                <div class="flex justify-center items-center p-3 bg rounded-xl gap-4 col-span-1">
                     <div class="bg-white p-3 rounded-full">
                         <img src="./assets/calender.png" alt="">
                     </div>
@@ -146,21 +146,23 @@
         </section>
         <!-- Notification section -->
         <section>
-            <div class="bg-white h-full p-6 rounded-xl">
+            <div class="bg-white h-full py-6 px-4 rounded-xl">
                 <div class="mb-4 pb-4 border-b-2 border-dashed border-gray-300">
-                    <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center gap-3 mb-5">
                         <img src="./assets/activity.png" alt="">
-                        <h4>Activity Log</h4>
+                        <h4 class="font-medium text-gray-700">Activity Log</h4>
                     </div>
-                    <button class="bg-blue-500 rounded-lg px-3 py-2 text-white">Clear History</button>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-blue-500 rounded-lg px-4 py-2 text-white">Clear History</button>
+                    </div>
                 </div>
                 <div>
-                    <p>You have Completed The Task Fix Mobile Button Issue at 12:48:15 PM</p>
-                    <p>You have Completed The Task Add Dark Mode at 12:48:15 PM</p>
-                    <p>You have Completed The Task Optimize  Home page at 12:48:15 PM</p>
-                    <p>You have Completed The Task Add new emoji 🤲 at 12:48:15 PM</p>
-                    <p>You have Completed The Task Integrate OpenAI API at 12:48:15 PM</p>
-                    <p>You have Completed The Task Improve Job searching at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Fix Mobile Button Issue at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Add Dark Mode at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Optimize  Home page at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Add new emoji 🤲 at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Integrate OpenAI API at 12:48:15 PM</p>
+                    <p class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Improve Job searching at 12:48:15 PM</p>
                 </div>
             </div>
         </section>
