@@ -1,59 +1,43 @@
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'none';
+const cardContainer=document.querySelectorAll('.card');
 
-document.getElementById('btn-1').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'block';
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'none';
-})
+for(const card of cardContainer)
+{
+    card.addEventListener('click',function(event){
+        
+        const header= this.closest(".card").querySelector("h1").innerText;
+        
 
-document.getElementById('btn-2').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'none';
-    document.getElementById('p-2').style.display = 'block';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'none';
-})
+        const today = new Date();
+        const time = today.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true});
 
-document.getElementById('btn-3').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'none';
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'block';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'none';
-})
+        const makeNotification='You have completed the task '+header+' issue at '+ time;
 
-document.getElementById('btn-4').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'none';
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'block';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'none';
-})
+        const  noticeContainer= document.createElement("p");
+        noticeContainer.textContent=makeNotification;
 
-document.getElementById('btn-5').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'none';
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'block';
-    document.getElementById('p-6').style.display = 'none';
-})
+        noticeContainer.classList.add("bg","rounded-xl", "p-3", "mt-2");
 
-document.getElementById('btn-1').addEventListener('click', function(){
-    document.getElementById('p-1').style.display = 'none';
-    document.getElementById('p-2').style.display = 'none';
-    document.getElementById('p-3').style.display = 'none';
-    document.getElementById('p-4').style.display = 'none';
-    document.getElementById('p-5').style.display = 'none';
-    document.getElementById('p-6').style.display = 'block';
-})
+        const noticeBoard=document.getElementById('notice');
+        noticeBoard.appendChild(noticeContainer);
+
+        const remainingTask=document.getElementById('remainingTask');
+        const completeTask=document.getElementById('completeTask');
+
+        remainingTask.innerText=parseInt(remainingTask.innerText)-1;
+        completeTask.innerText=parseInt(completeTask.innerText)+1;
+
+        const button=this.querySelector('Button');
+        button.setAttribute('disabled', 'true');
+        button.classList.remove('bg-blue-700');
+        button.classList.add('bg-blue-300');
+        
+        alert('Board update succesfully');
+        
+
+        if(remainingTask.innerText==='0')
+        {
+            alert('Congratulations!! Your task is completed succesfully');
+        }
+        
+    });
+}

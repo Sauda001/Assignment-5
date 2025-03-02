@@ -11,9 +11,7 @@
         .bg{
             background-color: rgba(55, 81, 253, 0.089);
         }
-        .bg-gradiant{
-            background-color: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8);
-        }
+
     </style>
 </head>
 
@@ -28,9 +26,9 @@
             <div class="flex justify-center items-center gap-9">
                 <div class="flex justify-center items-center gap-2 bg rounded-3xl py-2 px-3">
                     <img src="./assets/checkbox.png" alt="">
-                    <h1 class="text-3xl font-bold">24</h1>
+                    <h1 id="completeTask" class="text-3xl font-bold">24</h1>
                 </div>
-                <img class="bg rounded-full p-2" src="./assets/theme-btn.png" alt="">
+                <img id="background-color" class="bg rounded-full p-2" src="./assets/theme-btn.png" alt="">
             </div>
         </nav>
     </section>
@@ -38,7 +36,7 @@
     <!-- Main body section -->
     <section class="flex gap-3 mt-6">
         <!-- Grid section -->
-        <section class=" bg-white py-6 px-4 rounded-xl">
+        <section class=" bg-white py-6 px-4 rounded-xl w-3/4">
             <!-- grid header -->
             <div class="pb-6 mb-6 border-b-2 border-dashed border-gray-300 grid grid-cols-4 gap-3">
                 <div class="bg flex justify-center items-center p-3 gap-2 rounded-xl col-span-1">
@@ -47,10 +45,10 @@
                     </div>
                     <div>
                         <p class="text-slate-600 font-semibold text-sm">Task Assigned</p>
-                        <h1 class="text-slate-800 text-2xl font-bold">05</h1>
+                        <h1 id="remainingTask" class="text-slate-800 text-2xl font-bold">06</h1>
                     </div>
                 </div>
-                <div id="blog-btn" class="flex justify-center items-center gap-4 p-3 rounded-xl bg-blue-600 col-span-2 cursor-pointer ">
+                <div id="blog-btn" class="flex justify-center items-center gap-4 p-3 rounded-xl bg-gradient-to-r from-blue-800 to-blue-600 col-span-2 cursor-pointer ">
                     <div>
                         <img src="./assets/board.png" alt="">
                     </div>
@@ -63,14 +61,14 @@
                         <img src="./assets/calender.png" alt="">
                     </div>
                     <div class="text-slate-800">
-                        <p>Wed ,</p>
-                        <h1 class="font-bold">Jul 28 2025</h1>
+                        <p id="week"></p>
+                        <h1 id="realDate" class="font-bold"></h1>
                     </div>
                 </div>
             </div>
             <!-- grid body -->
             <div class="grid grid-cols-3 gap-5">
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-26">ShopeEase</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Fix Mobile Button Issue</h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -82,7 +80,7 @@
                         <button id="btn-1" class="px-3 bg-blue-700 text-white py-2 rounded-lg">Completed</button>
                     </div>
                 </div>
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-26">CloudSync</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Add Dark Mode</h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -94,7 +92,7 @@
                         <button id="btn-2" class="px-3 bg-blue-700 text-white py-2 rounded-lg">Completed</button>
                     </div>
                 </div>
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-26">SwiftPay</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Optimize  Home page </h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -106,7 +104,7 @@
                         <button id="btn-3" class="px-3 bg-blue-700 text-white py-2 rounded-lg">Completed</button>
                     </div>
                 </div>
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-16">Meta</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Add new emoji 🤲</h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -118,7 +116,7 @@
                         <button id="btn-4" class="px-3 bg-blue-700 text-white py-2 rounded-lg">Completed</button>
                     </div>
                 </div>
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-30">Google LLC</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Integrate OpenAI API</h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -130,7 +128,7 @@
                         <button id="btn-5" class="px-3 bg-blue-700 text-white py-2 rounded-lg">Completed</button>
                     </div>
                 </div>
-                <div class="px-3 py-4 bg rounded-xl">
+                <div class="card px-3 py-4 bg rounded-xl">
                     <p class="bg-white px-3 py-2 mb-2 rounded-lg w-26">Glassdoar</p>
                     <h1 class="text-lg mb-2 font-semibold text-slate-700">Improve Job searching</h1>
                     <p class="bg-white py-2 px-3 text-slate-500 rounded-lg mb-3">Debug using Chrome DevTools, check for overlappin..</p>
@@ -145,7 +143,7 @@
             </div>
         </section>
         <!-- Notification section -->
-        <section>
+        <section class="w-1/4">
             <div class="bg-white h-full py-6 px-4 rounded-xl">
                 <div class="mb-4 pb-4 border-b-2 border-dashed border-gray-300">
                     <div class="flex justify-center items-center gap-3 mb-5">
@@ -153,23 +151,22 @@
                         <h4 class="font-medium text-gray-700">Activity Log</h4>
                     </div>
                     <div class="flex justify-center items-center">
-                        <button class="bg-blue-500 rounded-lg px-4 py-2 text-white">Clear History</button>
+                        <button id="notificationClear" class="bg-blue-500 rounded-lg px-4 py-2 text-white">Clear History</button>
                     </div>
                 </div>
-                <div>
-                    <p id="p-1" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Fix Mobile Button Issue at 12:48:15 PM</p>
-                    <p id="p-2" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Add Dark Mode at 12:48:15 PM</p>
-                    <p id="p-3" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Optimize  Home page at 12:48:15 PM</p>
-                    <p id="p-4" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Add new emoji 🤲 at 12:48:15 PM</p>
-                    <p id="p-5" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Integrate OpenAI API at 12:48:15 PM</p>
-                    <p id="p-6" class="bg p-3 rounded-lg my-4 text-gray-500">You have Completed The Task Improve Job searching at 12:48:15 PM</p>
+                <div class="noticeBoardContainer p-2">
+                    <div id="notice" class="noticeBoard">
+                    </div>
                 </div>
             </div>
         </section>
     </section>
     <script src="./script/switch.js"></script>
-    <script src="./script/disabled.js"></script>
     <script src="./script/toggle.js"></script>
+    <script src="./script/theme.js"></script>
+    <script src="./script/history.js"></script>
+    <script src="./script/Date.js"></script>
+
 </body>
 
 </html>
